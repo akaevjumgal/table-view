@@ -1,0 +1,13 @@
+
+.table_actions {
+  &__edit {
+    color: var(--color-info);
+    text-decoration: underline;
+    background: transparent;
+  }
+
+  &__delete {
+    color: var(--color-error);
+    text-decoration: underline;
+  }
+}

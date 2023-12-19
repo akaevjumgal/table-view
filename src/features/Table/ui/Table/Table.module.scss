@@ -1,0 +1,23 @@
+
+.table {
+  color: rgba($color: #FFFFFF, $alpha: 0.5);
+  &__head {
+    background: var(--color-ocean);
+    height: rem(30px);
+  }
+
+  &__item {
+    padding: 0 rem(12px);
+    font-weight: 400;
+  }
+
+  &__body {
+    background: white;
+    &__cell {
+      height: rem(32px);
+      padding: 0 rem(12px);
+      border-bottom: rem(1px) solid var(--color-gray);
+      border-right: rem(1px) solid var(--color-gray);
+    }
+  }
+}

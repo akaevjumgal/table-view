@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ocean: #0a508b;
+  --color-info: #057ae3;
+  --color-error: #b0263d;
+  --color-gray: #ebebeb;
+  --color-text-gray: #868a8d;
+  --color-theme: #e5e8ed;
+  --color-deep-gray: #e6ecef;
+}
+
+body {
+  background: var(--color-theme);
+}
