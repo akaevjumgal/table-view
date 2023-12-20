@@ -21,7 +21,7 @@ export const DraftTable = () => {
     userList,
     form,
     isEditing,
-    toggleEdit,
+    closeEditModal,
     makeCopy,
     deleteLastTable,
   } = useDraftTable();
@@ -65,7 +65,7 @@ export const DraftTable = () => {
             />
           ))}
         </div>
-        <AppDialog size="xs" open={isEditing} handler={toggleEdit}>
+        <AppDialog size="xs" open={isEditing} handler={closeEditModal}>
           <EditForm form={form} />
         </AppDialog>
       </div>

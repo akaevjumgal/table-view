@@ -7,6 +7,7 @@ import {
   setUsers,
   copyUsers,
   deleteTable,
+  makeDraft,
 } from "@/entities/User";
 import { useFormik } from "formik";
 import { useEffect } from "react";
@@ -42,8 +43,21 @@ export const useDraftTable = () => {
     },
   });
 
-  const toggleEdit = () => {
-    dispatch(setEditingTo(!isEditing));
+  const closeEditModal = () => {
+    dispatch(
+      makeDraft({
+        draftId,
+        user: {
+          userId: draftUser.user.userId,
+          name: "",
+          surname: "",
+          age: "",
+          city: "",
+        },
+      })
+    );
+    form.resetForm();
+    dispatch(setEditingTo(false));
   };
 
   const makeCopy = () => {
@@ -59,7 +73,7 @@ export const useDraftTable = () => {
     users,
     userList,
     isEditing,
-    toggleEdit,
+    closeEditModal,
     makeCopy,
     deleteLastTable,
   };
